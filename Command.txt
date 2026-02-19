@@ -1,0 +1,58 @@
+// Command check Docker version
+docker -v
+
+// Check Docker it still work??
+docker run hello-world
+
+// Check status all container
+docker ps --all
+
+// ตรวจสอบรายชื่อ images ทั้งหมดที่อยุ่ในเครื่อง
+docker images
+
+// หยุด container ที่ทำงานอยู่ ระบุเป็นชื่อเฉพาะของมัน
+docker stop 8e626b2b09de
+
+docker pull < images_name >
+
+docker create busybox ping google.com
+
+docker start < container_id >
+
+docker ps
+
+docker rm <container_id>
+
+docker system prune
+
+//web server
+docker run nginx
+
+//เข้าไปใน container ( shell )
+docker exec -it <container_id / name> sh
+docker exit -it <container_id / name> bash
+
+exit
+
+cd /usr/share/nginx/html
+cat index.html
+
+docker run -p 80:80 nginx
+
+// port defult mysql 3306
+
+docker run -p 9000:80 nginx 
+
+docker run -d -p 8000:80 nginx 
+
+docker images
+docker image ls
+docker image inspect nginx
+
+docker pull wordpress
+docker pull mysql:5.7
+docker pull phpmyadmin/phpmyadmin
+
+docker network create < network_name >
+
+docker network ls 
